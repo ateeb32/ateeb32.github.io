@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script>
+
+function add() {
+
+var t1 = window.document.getElementById("num1");
+var t2 = window.document.getElementById("num2");
+var t3 = parseInt(t1.value) + parseInt(t2.value);
+
+	if (t1.value == "") {
+		document.getElementById("num1").focus();
+		alert("Empty First Number Field");
+		return ("Empty First Number Field");
+		
+	}
+	if (t2.value == "") {
+		document.getElementById("num2").focus();
+		alert("Empty Second Number Field");
+		return ("Empty Second Number Field");
+		
+	}
+	else {
+		return(t1.value + " + " + t2.value + " = " + t3);
+	}
+
+}
+
+function sub() {
+
+var t1 = window.document.getElementById("num1");
+var t2 = window.document.getElementById("num2");
+var t3 = parseInt(t1.value) - parseInt(t2.value);
+
+	if (t1.value == "") {
+		document.getElementById("num1").focus();
+		alert("Empty First Number Field");
+		return ("Empty First Number Field");
+		
+	}
+	if (t2.value == "") {
+		document.getElementById("num2").focus();
+		alert("Empty Second Number Field");
+		return ("Empty Second Number Field");
+		
+	}
+	else {
+		return(t1.value + " - " + t2.value + " = " + t3);
+	}
+
+}
+
+function multi() {
+
+var t1 = window.document.getElementById("num1");
+var t2 = window.document.getElementById("num2");
+var t3 = parseInt(t1.value) * parseInt(t2.value);
+
+	if (t1.value == "") {
+		document.getElementById("num1").focus();
+		alert("Empty First Number Field");
+		return ("Empty First Number Field");
+		
+	}
+	if (t2.value == "") {
+		document.getElementById("num2").focus();
+		alert("Empty Second Number Field");
+		return ("Empty Second Number Field");
+		
+	}
+	else {
+		return(t1.value + " x " + t2.value + " = " + t3);
+	}
+
+}
+
+function divide() {
+
+var t1 = window.document.getElementById("num1");
+var t2 = window.document.getElementById("num2");
+var t3 = parseInt(t1.value) / parseInt(t2.value);
+
+	if (t1.value == "") {
+		document.getElementById("num1").focus();
+		alert("Empty First Number Field");
+		return ("Empty First Number Field");
+		
+	}
+	if (t2.value == "") {
+		document.getElementById("num2").focus();
+		alert("Empty Second Number Field");
+		return ("Empty Second Number Field");
+		
+	}
+	else {
+		return(t1.value + " / " + t2.value + " = " + t3);
+	}
+
+}
+
+</script>
+
+<h1>Calculator</h1>
+
+</head>
+
+<body>
+
+		<input id="num1" type="Number"
+		placeholder="Enter First Number  . . ."
+		alt="Enter Number 1"
+		required="required" /> <br></br>
+	
+		<input id="num2" type="Number"
+		placeholder="Enter Second Number  . . ."
+		alt="Enter Number 2"
+		required="required" /> <br></br>
+	
+
+<input type="button" onclick="document.getElementById('add').innerHTML=add()" value="Add!" />
+<input type="button" onclick="document.getElementById('sub').innerHTML=sub()" value="Subtract!" />
+<input type="button" onclick="document.getElementById('multi').innerHTML=multi()" value="Multiply!" />
+<input type="button" onclick="document.getElementById('divide').innerHTML=divide()" value="Divide!" />
+
+<p id="add"></p>
+<p id="sub"></p>
+<p id="multi"></p>
+<p id="divide"></p>
+
+</body>
+</html>
