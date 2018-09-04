@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script>
+
+function add() {
+
+var t1 = window.document.getElementById("num1");
+var t2 = window.document.getElementById("num2");
+var t3 = parseInt(t1.value) + parseInt(t2.value);
+
+	return(t1.value + " + " + t2.value + " = " + t3);
+
+}
+
+function sub() {
+
+var t1 = window.document.getElementById("num1");
+var t2 = window.document.getElementById("num2");
+var t3 = parseInt(t1.value) - parseInt(t2.value);
+
+	return(t1.value + " - " + t2.value + " = " + t3);
+
+}
+
+function multi() {
+
+var t1 = window.document.getElementById("num1");
+var t2 = window.document.getElementById("num2");
+var t3 = parseInt(t1.value) * parseInt(t2.value);
+
+	return(t1.value + " x " + t2.value + " = " + t3);
+
+}
+
+function divide() {
+
+var t1 = window.document.getElementById("num1");
+var t2 = window.document.getElementById("num2");
+var t3 = parseInt(t1.value) / parseInt(t2.value);
+
+	return(t1.value + " / " + t2.value + " = " + t3);
+
+}
+
+</script>
+
+
+		<input id="num1" type="Number"
+		placeholder="Enter First Number  . . ."
+		alt="Enter Number 1"
+		required="required" /> <br></br>
+	
+		<input id="num2" type="Number"
+		placeholder="Enter Second Number  . . ."
+		alt="Enter Number 2"
+		required="required" /> <br></br>
+	
+
+<input type="button" onclick="document.getElementById('add').innerHTML=add()" value="Add!" />
+<input type="button" onclick="document.getElementById('sub').innerHTML=sub()" value="Subtract!" />
+<input type="button" onclick="document.getElementById('multi').innerHTML=multi()" value="Multiply!" />
+<input type="button" onclick="document.getElementById('divide').innerHTML=divide()" value="Divide!" />
+
+<p id="add"></p>
+<p id="sub"></p>
+<p id="multi"></p>
+<p id="divide"></p>
+
+</head>
+</html>
