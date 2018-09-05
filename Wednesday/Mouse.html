@@ -1,27 +1,31 @@
-<!DOCTYPE html>
 <html>
-<body>
-
-		<h2 onmousemove="showCoords(event)">Heading</h2>
-		
-		<input id="textField" type="Text"
-		placeholder="Insert Text  . . ."
-		alt="Insert Text"
-		required="required" /> <br></br>
-		
-		<p id="demo"></p>
-		
 <script>
-
-function showCoords(event) {
-
-    var x = event.clientX;
-    var y = event.clientY;
-    var coords = "X: " + x + ", Y: " + y;
-    document.getElementById("demo").innerHTML = coords;
-	
+var textBoxV;
+var span;
+var FS=10;
+	function moving(){
+		textBoxV = window.document.getElementById("textBox");
+		span = window.document.getElementById("SP");
+		span.style.top=window.event.clientY;
+		console.log(span.style.top);
+		span.style.left=window.event.clientX;
+		if (event.ctrlKey){ FS++;}
+		if (event.altKey){ FS--;}
+		span.style.fontSize=FS;
 	}
 
+	function mouseout(){
+		if(textBoxV.value!="")	span.innerHTML = textBoxV.value;
+	}
+	
 </script>
-</body>
-</html>
+
+<body onmousemove="moving()"> </body>
+
+	<input type="text" id="textBox" value ="abc" 
+	style="position:absolute;top:50;left:50"
+	onmouseleave="mouseout()"></input>
+
+<span style="position:absolute;top:100;left:200" id="SP">The Shafeeq</span>
+
+</html>​

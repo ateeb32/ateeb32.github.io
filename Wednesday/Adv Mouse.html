@@ -1,0 +1,78 @@
+<html>
+<script>
+var textBoxV;
+var span;
+var FS=10;
+	function moving(){
+		textBoxV = window.document.getElementById("textBox");
+		textBoxVis = window.document.getElementById("textVisible");
+		span = window.document.getElementById("SP");
+		span.style.top = window.event.clientY;
+		console.log(span.style.top);
+		span.style.left = window.event.clientX;
+		if (event.ctrlKey){ FS++;}
+		if (event.altKey){ FS--;}
+		span.style.fontSize = FS;
+	}
+
+	function mouseout(){
+		if(textBoxV.value!="")	span.innerHTML = textBoxV.value;
+		span.style.backgroundColor = "white";
+	}
+	
+	function redColorText(){
+	
+		span = window.document.getElementById("SP");
+		span.style.backgroundColor = "red";
+	
+	}
+	
+	function blueColorText(){
+	
+		span = window.document.getElementById("SP");
+		span.style.backgroundColor = "blue";
+	
+	}
+	
+	function greenColorText(){
+	
+		span = window.document.getElementById("SP");
+		span.style.backgroundColor = "green";
+	
+	}
+	
+	function visibleText(){
+	
+		if(textBoxVis.value!="")	span.innerHTML = textBoxVis.value;
+		span.style.backgroundColor = "white";
+		span.style.backgroundColor = "white";
+	
+	}
+	
+</script>
+
+<body onmousemove="moving()"> </body>
+
+	<input type="text" id="textBox" value ="abc" 
+	style="position:absolute;top:50;left:50"
+	onmouseleave="mouseout()"></input>
+	
+	<input type="text" id="textRed" value ="Red" 
+	style="position:absolute;top:100;left:50;color: red"
+	onmouseleave="redColorText()"></input>
+	
+	<input type="text" id="textBlue" value ="Blue" 
+	style="position:absolute;top:150;left:50;color: blue"
+	onmouseleave="blueColorText()"></input>
+	
+	<input type="text" id="textGreen" value ="Green" 
+	style="position:absolute;top:200;left:50;color: green"
+	onmouseleave="greenColorText()"></input>
+	
+	<input type="text" id="textVisible" value ="Visible" 
+	style="position:absolute;top:250;left:50"
+	onmouseleave="visibleText()"></input>
+
+<span style="position:absolute;top:300;left:200" id="SP">The Shafeeq</span>
+
+</html>​
