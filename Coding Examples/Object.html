@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html> 
+<body>
+<h1>variables 2</h1>
+<script>
+
+var Person = { //Object Personn
+name:"Bob", //Atributes of the person object 
+age:10, 
+occupation:"Engineer"};
+	
+function increaseage(){
+	Person.age++;
+	console.log(Person.name," ", Person.age, " ", Person.occupation);
+	document.getElementById('para').innerText=Person.age;
+}
+
+</script>
+
+<p id = "para" >Bert </p>
+
+<button onclick="increaseage()" id="Bert">Increase Age </button>
+
+</body>
+</html>
