@@ -1,0 +1,29 @@
+<html>
+<body>
+<script>
+
+function aFunction(){
+	var element = document.getElementById("demo");
+	var alphaExp = /^[a-zA-Z]+$/;
+		if (element.value == ""){
+			console.log("Field is empty");
+			return false;
+		}
+
+	if (!(element.value.match(alphaExp))){
+		console.log("Tried to use illegal character");
+		return false;
+	}
+}
+
+</script>
+
+<form onsubmit = "return aFunction()" action = "Success.html">
+
+<input id = "demo">
+<input type = "Submit">
+</input>
+
+</form>
+</body>
+</html>

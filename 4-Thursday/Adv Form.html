@@ -1,0 +1,53 @@
+<html>
+<body>
+<script>
+
+function aFunction(){
+	var element1 = document.getElementById("demo1");
+	var element2 = document.getElementById("demo2");
+	var element3 = document.getElementById("demo3");
+	var alphaExp = /^[a-zA-Z]+$/;
+	var dob = /^\d{1,2}\/\d{1,2}\/\d{4}$/;
+	var email = /\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}$/;
+	
+	if (element1.value == "" || element2.value == ""){
+		alert("Field is empty");
+		return false;
+		}
+
+	if (!(element1.value.match(alphaExp))){
+		alert("Tried to use illegal character");
+		return false;
+	}
+	
+	if (!(element2.value.match(dob))){
+		alert("Wrong Date of Birth Format");
+		return false;
+	}
+	
+	if (!(element3.value.match(email))){
+		alert("Wrong E-Mail Format");
+		return false;
+	}
+}
+
+</script>
+
+<form onsubmit = "return aFunction()" action = "Success.html">
+
+Enter Name<br>
+<input id = "demo1"><br><br>
+
+Enter DOB<br>
+<input id = "demo2"><br><br>
+
+Enter E-Mail Address<br>
+<input id = "demo3"><br><br>
+
+<input type = "Submit">
+
+</input>
+
+</form>
+</body>
+</html>
